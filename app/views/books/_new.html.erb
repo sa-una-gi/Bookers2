@@ -1,0 +1,21 @@
+<h2>New Book</h2>
+
+<%= form_for book do |f| %>
+
+  <div class="field row">
+	<label>Title</label>
+	<%= f.text_field :title, class: " col-xs-12" %>
+  </div>
+
+  <div class="field row">
+	<label>Opinion</label>
+	<%= f.text_area :body, class: " col-xs-12" %>
+  </div>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <div class="actions row">
+	<%= f.submit "Create Book" ,class: "btn btn-primary btn-block col-xs-12" %>
+  </div>
+
+<% end %>

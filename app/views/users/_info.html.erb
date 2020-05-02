@@ -1,0 +1,19 @@
+<h2>User info</h2>
+
+<%= attachment_image_tag user, :profile_image, size: "100x100",class: "pull-left profile-thumb", fallback: "no_image.jpg" %>
+
+<table class= table>
+	<tbody>
+		<tr>
+			<th>name</th>
+			<th><%= user.name %></th>
+		</tr>
+			<th>introduction</th>
+			<th><%= user.introduction %></th>
+		</tr>
+	</tbody>
+</table>
+
+<div aria-hidden="true" class="row">
+<%= link_to "",edit_user_registration_path, class: "glyphicon glyphicon-wrench btn btn-default col-xs-12" %>
+</div>
