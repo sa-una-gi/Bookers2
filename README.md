@@ -1,24 +1,18 @@
-# README
+# Boookers2 本の感想投稿アプリ
+これはユーザーログイン機能を実装した本の感想SNSアプリBookers2です。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## DMMWEBCAMP 「アプリケーションを完成させよう２」
+DMMWEBCAMPの「アプリケーションを完成させよう２」の第9章の提出課題となります。
 
-Things you may want to cover:
+## 実装している機能
+*Deviseを用いたユーザー情報の登録、ログイン、編集機能
+*各ユーザーに紐づく本のタイトルと感想の投稿機能
+*主にユーザー一覧ページ、本一覧ページ、ユーザーページ、本の詳細ページからなりそれぞれのページにユーザープロフィール・新規投稿フォームが表示される
 
-* Ruby version
+### ユーザーに紐づく情報
+1. name
+2. email
+3. password
+4. introduction
+5. profile-image
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
