@@ -4,10 +4,9 @@ class Users::SessionsController < Devise::SessionsController
    before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
-   def new
-     redirect_to user_path(current_user) if user_signed_in?
-     super
-   end
+  # def new
+  #   super
+  # end
 
   # POST /resource/sign_in
   # def create
@@ -30,4 +29,7 @@ class Users::SessionsController < Devise::SessionsController
      user_path(current_user)
    end
 
+   def after_sign_out_path_for(resource)
+    root_path
+   end
 end

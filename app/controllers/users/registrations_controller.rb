@@ -5,13 +5,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
    before_action :configure_account_update_params, only: [:update,:edit]
 
   # GET /resource/sign_up
-   def new
-    if user_signed_in?
-     @user = User.new
-    else
-     redirect_to user_path(current_user)
-    end
-   end
+  # def new
+  #  super
+  # end
 
   # POST /resource
   # def create
@@ -20,7 +16,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/edit
   def edit
-    @user = User.find(params[:id])
     unless @user == current_user
       redirect_to user_path(current_user)
     end
@@ -63,9 +58,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
    end
 
   # The path used after sign up.
-   def after_sign_up_path_for(resource)
-     user_path(current_user)
-   end
 
   def update_resource(resource, params)
     resource.update_without_password(params)

@@ -49,31 +49,13 @@ a:hover {
 	background-color:black;
 }
 
-.container:before, .container:after {
-    content: " ";
-    display: table;
-}
-
-.navbar:after {
-    clear: both;
-}
-
-.navbar:before, .navbar:after {
-    content: " ";
-    display: table;
-}
-
-p {
-    margin: 0 0 10px;
-}
-
-
 p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    margin: 0 0 10px;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -85,9 +67,6 @@ h1, .h1, h2, .h2, h3, .h3 {
     color: red;
 }
 
-div {
-    display: block;
-}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
@@ -95,9 +74,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 img {
     vertical-align: middle;
-}
-
-img {
     border: 0;
 }
 
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

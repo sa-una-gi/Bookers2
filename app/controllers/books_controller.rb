@@ -2,9 +2,6 @@ class BooksController < ApplicationController
 
    before_action :authenticate_user!
 
-  def top
-  end
-
   def index
    @books = Book.all.order(created_at: :desc)
    @book = Book.new
