@@ -16,3 +16,7 @@ DMMWEBCAMPの「アプリケーションを完成させよう２」の第9章の
 4. introduction
 5. profile-image
 
+### ブックに紐づく情報
+1. title
+2. body
+3. user_id
