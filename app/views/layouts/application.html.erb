@@ -44,7 +44,7 @@
         </li>
 
          <li class="" aria-hidden="true">
-         <%= link_to " logout", destroy_user_session_path, method: :delete,class: "glyphicon glyphicon-log-out"  %>
+         <%= link_to " logout", destroy_user_session_path, method: :delete,class: "glyphicon glyphicon-log-out",redirect_to: root_path  %>
         </li>
 
       <% else %>
