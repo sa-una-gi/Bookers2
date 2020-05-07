@@ -5,13 +5,12 @@ Rails.application.routes.draw do
   	registrations: 'users/registrations'
   }
 
-  resources :users, only: [:index,:show,:update]
+  resources :users, only: [:index,:show,:update,:edit]
 
   resources :books
   root to: 'home#top'
   get 'users/info'
   get 'home/about' => 'home#about'
-  get 'users/edit' => 'users/registrations#edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

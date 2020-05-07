@@ -38,11 +38,12 @@ class BooksController < ApplicationController
     unless @book.user_id == current_user.id
       redirect_to books_path
     end
+    render :layout => 'not_img'
   end
 
   def update
     @book = Book.find(params[:id])
-    if @book.update
+    if @book.update(book_params)
       flash[:success] = "Book was successfully updated."
       redirect_to book_path(@book)
     else

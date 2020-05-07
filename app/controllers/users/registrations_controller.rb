@@ -4,6 +4,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    before_action :configure_sign_up_params, only: [:create,:new]
    before_action :configure_account_update_params, only: [:update,:edit]
 
+   layout 'not_img'
   # GET /resource/sign_up
   # def new
   #  super
@@ -15,22 +16,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  def edit
-    unless @user == current_user
-      redirect_to user_path(current_user)
-    end
-  end
+  #def edit
+  #  unless @user == current_user
+  #    redirect_to user_path(current_user)
+  #  end
+  # end
 
   # PUT /resource
-  def update
-      @user = current_user
-    if @user.update(user_params)
-      flash[:success] = "You have updated user successfully."
-      redirect_to books_path
-    else
-      render :edit
-    end
-  end
+  #def update
+  #    @user = current_user
+  #  if @user.update(user_params)
+  #    flash[:success] = "You have updated user successfully."
+  #    redirect_to books_path
+  #  else
+  #    render :edit
+  #  end
+  #end
   # DELETE /resource
   # def destroy
   #   super
